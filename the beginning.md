@@ -4,7 +4,7 @@
 
 My goals are to create an Azure lab that show case my experience and developing expertise in Azure.
 
-I would like to create a lab with my own subscription and domain.
+I would like to create a lab with my own subscription and domain and replicate methodology that would be used in a real orgainization.
 
 Some things will be limited, as I am trying to reduce costs.
 
@@ -16,7 +16,7 @@ As of now (2/18/2026):
 I have been employed with Eastern Metal Supply since Novemeber, 2024. 
 I am currently trying to become the System/Network Admin
 
-I have the following relevant certifcations:
+### Certifcations:
 
 **CompTIA**
 A+
@@ -26,3 +26,8 @@ Sec+
 **Microsoft**
 AZ-900
 MS-900
+
+### Experience
+
+I currently use different parts of Azure in my everyday tasks as part of a hybrid environment.
+
