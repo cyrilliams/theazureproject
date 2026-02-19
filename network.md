@@ -38,3 +38,18 @@ Luckily this only took a couple seconds:
 For now, I will keep everything internal. 
 I do not need to create a public IP yet since I don't have any resources that need to talk to the internet.
 
+
+# Network Security Groups
+
+Now we will configure our NSG by creating one. 
+NSG's are essentially firewall rules.
+I'll create one one to match our V-Net
+
+<img width="954" height="456" alt="image" src="https://github.com/user-attachments/assets/180e0bc7-b4bc-4d6a-ab32-f28e5b471610" />
+
+I won't do too much here for now, but I'll block inbound traffic for RDP (Port 3389), which is a common port to block for networks that don't need it.
+I could also block legacy ports like SMTP and POP/IMAP
+
+<img width="704" height="1155" alt="image" src="https://github.com/user-attachments/assets/d4925850-5d84-44b4-be89-aa8b5e560bae" />
+
+
