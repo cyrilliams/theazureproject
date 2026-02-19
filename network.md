@@ -39,7 +39,7 @@ For now, I will keep everything internal.
 I do not need to create a public IP yet since I don't have any resources that need to talk to the internet.
 
 
-# Network Security Groups
+## Network Security Groups
 
 Now we will configure our NSG by creating one. 
 NSG's are essentially firewall rules.
@@ -51,5 +51,17 @@ I won't do too much here for now, but I'll block inbound traffic for RDP (Port 3
 I could also block legacy ports like SMTP and POP/IMAP
 
 <img width="704" height="1155" alt="image" src="https://github.com/user-attachments/assets/d4925850-5d84-44b4-be89-aa8b5e560bae" />
+
+
+## Mistakes and Re-Considerations
+
+I did not realize that address spacing was off.
+After realizing my mistake, I've changed my V-Net address subnet mask to /16. 
+This gives me a whole lot more subnets.
+
+I created 2 more subnets here and changed the default subnet so all subnet are /24
+
+<img width="1494" height="217" alt="image" src="https://github.com/user-attachments/assets/460509da-4d63-41ff-9fc7-e15ade44bc90" />
+
 
 
