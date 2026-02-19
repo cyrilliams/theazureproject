@@ -32,3 +32,31 @@ I also think it is particular useful to ensure Microsoft Authenticator is enable
 This is something we push in my current environment and I see why it works.
 
 <img width="2196" height="778" alt="image" src="https://github.com/user-attachments/assets/48c503e2-44d6-4e83-8a72-76d76e97f18e" />
+
+
+# Conditional Access and PIM
+
+### Conditional Access
+
+While I will not be setting up Conditional Access and PIM (Privileged Identity Management) due to lack of licensing, there are things I would want to set up in a real world environment.
+Currently, we use CA to say, "Hey, if you are not signing in from at least in the United States, you definitely cannot login"
+If I was all enrolling devices with Intune (which we hopefully will soon in this lab), I would probably also want to enforce access to certain resources can only be accessed from compliant devices.
+
+
+
+### PIM
+
+I don't believe we have PIM setup in my current environment but it can and will come in handy to harden the environment and reduce risk.
+This would go hand and hand with enforcing MFA for privileged roles like Global Admins. 
+If we wanted to set it up, we could require re-authentication for functions that require Admin Roles.
+
+## Exclusion Group
+
+Lastly, I'll set up an exclusion group which will be the main admin account. 
+This will be just in case I lock myself out or mess something up with my Entra based admin account.
+
+<img width="952" height="651" alt="image" src="https://github.com/user-attachments/assets/3ce26d49-7a1b-496f-a9c6-07248817e272" />
+
+
+
+
