@@ -15,6 +15,21 @@ This is essentially me stating that I want the authoritative source and go-to fo
 
 <img width="1151" height="761" alt="image" src="https://github.com/user-attachments/assets/a50eeef6-be15-45df-b066-c2382b98e784" />
 
+
+## Setup Custom Domain
+
+I'll setup a custom domain next. Entra gives me a destination to give to my registrar as a TXT record:
+
+<img width="571" height="248" alt="image" src="https://github.com/user-attachments/assets/bd4964e0-5788-471f-9f4d-f2d56a88bd51" />
+
+I'll go ahead and enter that in as a TXT record in Namecheap:
+(I've blocked the record info just in case)
+
+<img width="1112" height="54" alt="image" src="https://github.com/user-attachments/assets/f5da0f30-4d29-4cb5-ac3b-57fed65f875b" />
+
+I believe now, I'll have to wait a bit. I will come back to this in 30 minutes to an hour!
+
+
 ## Setup Organization
 
 We will also get started in reistering our domain in Entra, as well as setting up our orgainzation.
@@ -36,5 +51,7 @@ For the networking portion, I'll enable public access and allow only my created 
 *This will be easier for now than setting up private endpoints and is still very secure!*
 
 <img width="759" height="662" alt="image" src="https://github.com/user-attachments/assets/c0ecd00b-1f3a-4e7c-84bb-5f5e72e0ce3a" />
+
+
 
 
