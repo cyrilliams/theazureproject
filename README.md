@@ -1,2 +1,3 @@
 # theazureproject
-My own Azure project.
+Hello, this is my Azure project.
+
