@@ -27,4 +27,11 @@ The deployed app has now been created:
 
 <img width="1635" height="797" alt="image" src="https://github.com/user-attachments/assets/0cda9029-3bd4-4e3d-a705-79fc8a407d69" />
 
+#### Things To Note (Free Tier):
 
+I was trying to deploy the Web App in East US, but kept getting an error.
+I validated the rest of my settings and tried again with East US 2 and Southcentral US, still getting the same error.
+
+After looking into this more, I found that the free tier for webapps may not be supported in some regions due to capacity restraints. 
+
+I redeployed in Canada Central and my Web App deployed with no issues.
