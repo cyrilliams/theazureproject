@@ -37,8 +37,14 @@ Deployed:
 
 
 
-*My github currently does not have any code in it. We will deploy that soon*
+Next, I'll deploy code to the specified repo.
+
+I am using a simple HTML script to deploy a website that just says "Hello World"
+*I don't currently know any code besides Python, so I will be learning different languages as I go!*
+
+<img width="1911" height="369" alt="image" src="https://github.com/user-attachments/assets/85317ca4-b5cb-4472-81dd-805532fed75b" />
 
 
 
-Stopping point: next we will deploy the code and setup up the SWA with our custom domain
+
+
