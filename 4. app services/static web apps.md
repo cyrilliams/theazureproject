@@ -40,10 +40,42 @@ Deployed:
 Next, I'll deploy code to the specified repo.
 
 I am using a simple HTML script to deploy a website that just says "Hello World"
+
 *I don't currently know any code besides Python, so I will be learning different languages as I go!*
 
 <img width="1911" height="369" alt="image" src="https://github.com/user-attachments/assets/85317ca4-b5cb-4472-81dd-805532fed75b" />
 
+
+*After making a small change in the .yml file created in our GitHub repo,* we are now ready to check out our website!
+
+We'll click the URL created by Azure and...
+
+<img width="2274" height="197" alt="image" src="https://github.com/user-attachments/assets/3799a8cb-7313-4d91-9aff-698b05cdff08" />
+
+Viola!
+
+Let's make a change to it from our repo. 
+*I made changes through Visual Studio this time*
+
+We'll make the changes, then commit:
+
+<img width="999" height="342" alt="image" src="https://github.com/user-attachments/assets/9f2762a3-4807-44ed-a5c8-4f27b5d5d578" />
+
+Within seconds, Azure has already recieved the changes:
+
+<img width="1450" height="388" alt="image" src="https://github.com/user-attachments/assets/0a7fe243-2d91-4f26-96a0-9ea2fd40ac1e" />
+
+Let's verify:
+
+<img width="1875" height="160" alt="image" src="https://github.com/user-attachments/assets/89ae2bd7-2a97-4e17-bc1a-9303e86f3e79" />
+
+
+
+
+Obviously this is a super simple example, but this is a great way to host front end only applications through Azure.
+
+
+Next, I'll look into changing the URL to my custom domain and using a CI/CD pipeline to push code.
 
 
 
