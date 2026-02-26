@@ -77,6 +77,11 @@ Obviously this is a super simple example, but this is a great way to host front 
 
 Next, I'll look into changing the URL to my custom domain and using a CI/CD pipeline to push code.
 
+#### Extra:
 
+I went back and changed the title *(what shows on the TAB)* part to "Cyril's Static Web App Test"
 
+<img width="728" height="240" alt="image" src="https://github.com/user-attachments/assets/c1f60fd9-cf68-40ff-8cd2-7f255ff8e413" />
+
+This whole process took less than a minute to commite and deploy.
 
