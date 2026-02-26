@@ -72,7 +72,7 @@ Let's verify:
 
 
 
-Obviously this is a super simple example, but this is a great way to host front end only applications through Azure.
+Obviously this is a super simple example, but this is a great way to host front end only code through Azure.
 
 
 Next, I'll look into changing the URL to my custom domain and using a CI/CD pipeline to push code.
