@@ -71,9 +71,11 @@ So, we will rebuild the container and use Port 80 be used when we setup or DNS r
 
 We'll do that by changing the environment variables here:
 *Instead of using 5320, we will change it to 80*
+
 <img width="949" height="424" alt="image" src="https://github.com/user-attachments/assets/ff6bc9f4-4538-4975-a881-dd213d33199f" />
 
 As well as allow Port 80:
+
 <img width="795" height="446" alt="image" src="https://github.com/user-attachments/assets/49a201fd-5936-4fb7-84f8-0b0bbe78c53c" />
 
 Now, I can hit Memos with just the IP without specifying the port (because all traffic over the internet is automatically 443 or 80)
