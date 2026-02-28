@@ -83,5 +83,5 @@ I went back and changed the title *(what shows on the TAB)* part to "Cyril's Sta
 
 <img width="728" height="240" alt="image" src="https://github.com/user-attachments/assets/c1f60fd9-cf68-40ff-8cd2-7f255ff8e413" />
 
-This whole process took less than a minute to commite and deploy.
+This whole process took less than a minute to commit and deploy.
 
