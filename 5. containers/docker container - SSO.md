@@ -1,6 +1,6 @@
 # Setting Up SSO
 
-*This is less specific to the container instance but I will keep it in this thread for orginization*
+*This is less specific to the container instance but I will keep it in this thread for organization*
 
 ### App Registration
 
