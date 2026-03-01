@@ -52,15 +52,3 @@ Now, lets user our domain name:
 
 Perfect! It even uses HTTPS!
 
-Now lets setup SSO (again)
-
-Lets setup the Redirect URI with HTTPS
-
-<img width="1545" height="415" alt="image" src="https://github.com/user-attachments/assets/281fe466-dc7b-4b5d-8fa4-4fce833700de" />
-
-Now we'll copy over all the Endpoint URLs
-
-
-
-
-*Will finish*
