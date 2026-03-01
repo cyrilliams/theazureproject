@@ -48,7 +48,8 @@ We'll also add the SNI SSL Certificate
 
 Now, lets user our domain name:
 
-<img width="1920" height="1020" alt="image" src="https://github.com/user-attachments/assets/b414ac9b-972f-42d1-89ac-b34cd7b91c73" />
+<img width="2560" height="1380" alt="image" src="https://github.com/user-attachments/assets/f3b6dae9-0320-430d-9e1a-526802091b24" />
+
 
 Perfect! It even uses HTTPS!
 
