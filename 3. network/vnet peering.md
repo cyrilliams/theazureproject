@@ -1,7 +1,7 @@
 # Create a V-Net Peering
 
 
-Let's create 2 V-Net's and make sure they can communicate to each other via Peering
+##### Let's create 2 V-Net's and make sure they can communicate to each other via RDP through V-Net Peering.
 
 Peering uses Microsoft's internal network to communicate.
 
