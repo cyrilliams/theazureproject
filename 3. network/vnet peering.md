@@ -53,7 +53,6 @@ As well as the vnetpeer-2 side:
 
 <img width="1321" height="323" alt="image" src="https://github.com/user-attachments/assets/da598135-9c3f-4782-8f91-6d2e78884dfc" />
 
-<img width="390" height="584" alt="image" src="https://github.com/user-attachments/assets/433e7354-0b67-474a-8912-243e0fc9c8e3" />
 
 #### Test Connectivity
 
@@ -111,3 +110,5 @@ And we can double check this by trying to connect, which we cannot:
 And that's V-Net Peering.
 
 *Originally I would like to be able to ping each of the devices. I will have to do more research in the setup of the VMs and V-Nets or NSG's as to why I could not ping VM2 from VM1. But for now, these VMs are costing me money so I will delete the whole Resource Group*
+
+<img width="390" height="584" alt="image" src="https://github.com/user-attachments/assets/433e7354-0b67-474a-8912-243e0fc9c8e3" />
