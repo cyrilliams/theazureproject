@@ -73,6 +73,8 @@ If I go back and create a Tag for the Resource Group, it will automatically appl
 
 Let's check the Key Vault:
 
-*Remediation task is running and taking forever*
+<img width="1906" height="450" alt="image" src="https://github.com/user-attachments/assets/246eaf08-c809-411d-af02-d7ce6d86e467" />
 
+We can see that it has now automatically applied the Tags to the Resource within the RG.
 
+This can be good if you have a lot of reources that need to be Tagged.
