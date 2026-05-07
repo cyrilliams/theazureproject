@@ -1,4 +1,4 @@
-# Set Up a DNS Zone
+# Set Up a Public DNS Zone
 
 In this doc, we'll set up a DNS Zone, to automatically resolve our domain to our Azure Web Services
 
