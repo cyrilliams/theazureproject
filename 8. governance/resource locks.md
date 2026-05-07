@@ -97,3 +97,7 @@ Reference resources (gold images, baseline configs)
 Temporary freeze during investigations or incidents
 
 ⚠️ Used sparingly because it blocks normal operations
+
+# Delete Resource/RG
+
+To delete the Resource or RG, delete the Resource Lock.
