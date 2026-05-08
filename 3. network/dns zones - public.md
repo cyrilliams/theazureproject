@@ -4,6 +4,8 @@ In this doc, we'll set up a DNS Zone, to automatically resolve our domain to our
 
 There are two types of DNS Zones: Public & Private
 
+We'll create a Public DNS Zone, which is resolvable over the internet.
+
 ## Create DNS Zone
 
 We'll search "DNS Zones"
