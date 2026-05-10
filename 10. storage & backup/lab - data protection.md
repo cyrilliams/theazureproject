@@ -1,5 +1,3 @@
-L>dD&B#QJ:a932!
-
 # Data Protection
 
 In this lab, we'll create a VM, create a Recovery Service vault and a backup policy for the VM, 
