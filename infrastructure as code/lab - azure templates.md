@@ -1,4 +1,4 @@
-# Manage Azure resources by using Azure Resource Manager Templates
+# Manage Azure Resources By Using ARM Templates
 
 In this doc, we'll go over 5 different ways to create Resources using Templates in Azure:
 
