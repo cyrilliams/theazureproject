@@ -1,4 +1,4 @@
-*3 of 3 from [Azure Storage Account LAB](https://github.com/cyrilliams/theazureproject/blob/main/LABS/lab%20-%20azure%20storage%20account.md)
+*3 of 3 from [Azure Storage Account LAB](https://github.com/cyrilliams/theazureproject/blob/main/LABS/lab%20-%20azure%20storage%20account.md)*
 
 # Create & Manage Azure File Share/Storage
 
