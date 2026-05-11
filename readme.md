@@ -8,7 +8,11 @@
 Hello, my name is Cyril and this is my Azure project!
 
 
-My goal is to learn all the fundametal and in depth aspects of Microsoft Aazure, as well as pass the AZ-104 exam.
+My goal is to learn all the fundametal and in depth aspects of Microsoft Azure, as well as pass the AZ-104 exam.
+
+<img width="150" height="150" alt="image" src="https://github.com/user-attachments/assets/60a420c6-0745-46b6-83ac-4f6e902ad843" />
+
+---
 
 
 I plan to document everything I do here to show my growth and learning in Azure and Microsoft based environments. 
