@@ -1,0 +1,101 @@
+# Creating a Virtual Machine in Azure
+
+I was very reluctant to do this part due to it being one of the parts of Azure that costs money,
+but luckily, we can find some cost effective ways to still test out different parts of Azure.
+
+## Basics
+
+I'll create the VM:
+- Name it something relevant with some sort of convention
+- Put it in my Network Resource Group from earlier
+- Create it in East US, which is closest to me
+- Create it in Zone 2 rather than 1 due to the machine SKU I wanted not being available
+
+<img width="773" height="661" alt="image" src="https://github.com/user-attachments/assets/c6b7e159-37e0-475f-b69b-92f1282a3a3d" />
+
+Next I'll specify the VM image:
+
+<img width="763" height="210" alt="image" src="https://github.com/user-attachments/assets/09254c7e-95f1-4128-b0e6-2a0b89d73082" />
+
+*For the sake of cost management, I will enable the Azure Spot discount, which takes my estimated monthly cost from $90 to $32*
+*Azure Spot will use extra space they have on Azure servers, but discard my VM when space is needed, hence the discount*
+
+<img width="754" height="280" alt="image" src="https://github.com/user-attachments/assets/cc199e9e-2bad-4882-9840-78cb7fbf4a2d" />
+
+
+Lastly, I'll create my admin account and set no allowed inbound ports. I won't be RDP'ing into it yet. 
+I may even use Bastion instead which is an Azure HTTPS alternative to RDP
+
+<img width="778" height="558" alt="image" src="https://github.com/user-attachments/assets/9a90b357-5ab0-4a9e-8640-25a9e1830faa" />
+
+## Disks
+
+I'll use a HDD to bring down costs. We are down to $18 a month, which is way more manageable.
+I wont encrypt the disk right now either. There will be nothing on there for now.
+
+<img width="788" height="581" alt="image" src="https://github.com/user-attachments/assets/20245c91-3a31-4b94-a688-fcc8c4dfae7b" />
+
+## Networking
+
+For now, I'll put it on my Testing Subnet.
+There is an NSG already applied to that subnet so no need to do that here.
+I'll also disable a Public IP, I only want internal traffic for now.
+
+*I will create another VM in a different subnet to verify different devices can communicate.
+Then, I'll set up a on prem server and get that connected with a site to site VPN.
+But, that'll be another time*
+
+<img width="758" height="446" alt="image" src="https://github.com/user-attachments/assets/688dfdef-522f-40d5-a50b-286d72d78319" />
+
+## Management
+
+I'm going to enable Defender because it's free, 
+as well as enable logins using Entra
+
+I wont enable backups or disaster recover for now. (These costs extra)
+
+<img width="775" height="656" alt="image" src="https://github.com/user-attachments/assets/b1c303b2-6611-4d52-b73f-f59518984681" />
+
+
+## Monitoring
+
+For now, I'll enable the default monitoring and have it be sent to my Admin account.
+I would like this in a real environment.
+
+<img width="840" height="678" alt="image" src="https://github.com/user-attachments/assets/6a7a2d34-d541-4e93-a0d3-48e9366494f0" />
+
+I'll disable diagnostics (extra and unnecessary)
+
+<img width="689" height="663" alt="image" src="https://github.com/user-attachments/assets/9f7e3daa-461c-40be-9480-95e2945bcb71" />
+
+I'll skip the advanced section and tags.
+
+Validation has passed and I'll press create!
+
+<img width="1912" height="804" alt="image" src="https://github.com/user-attachments/assets/62a44b62-0e0b-48f0-bb08-ef42c43ca468" />
+
+
+**VM created!**
+
+<img width="1920" height="300" alt="image" src="https://github.com/user-attachments/assets/911188b0-9758-4113-b3aa-c1fc8492e3cc" />
+
+*** Network Considerations
+
+**Port 3389 - RDP**
+
+Originally, I had a block in my NSG on Port 3389. 
+To connect to my Windows VM (without Bastion), I need to use RDP.
+I would need to allow Port 3389 inbound to that subnet.
+
+<img width="1885" height="478" alt="image" src="https://github.com/user-attachments/assets/d7e8c61d-f7b2-4e86-8792-7c7eb964c718" />
+
+
+Currently, I have my VM set to only allow internal traffic. 
+I will have to figure out the best method connect to that internal Azure network
+
+
+
+
+
+
+
