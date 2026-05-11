@@ -18,5 +18,7 @@ I am super excited to learn all the various features in Azure and how to impleme
 
 ---
 
-I will be including LABS that document me showing my work, as well as different aspects like settings up Virtual Machines in Azure or creating a Web App.
+I will be including [LABS](https://github.com/cyrilliams/theazureproject/tree/main/LABS) that document me showing my work, as well as different aspects like settings up Virtual Machines in Azure or creating a Web App.
+
+[LABS](https://github.com/cyrilliams/theazureproject/tree/main/LABS) will be full projects that I have completed. Some documents may include various pieces of those LABS as well.
 
