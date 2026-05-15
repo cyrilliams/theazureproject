@@ -187,12 +187,8 @@ Name and Link it to our ManufacturingVnet
 We'll go to **DNS Management > Recordsets > Add**, and add what would be our VM's to they could resolve.
 
 In this scenario, the IP of 10.30.1.4 would resolve to sensorvm.privatevnet.cyriltest.site
+
 <img width="569" height="523" alt="image" src="https://github.com/user-attachments/assets/7ccb8bf6-d345-460d-955f-3395734dfde3" />
 
 
-## Test with VM
-
-I'll create a VM real quick and verify the IP address:
-
-<img width="775" height="578" alt="image" src="https://github.com/user-attachments/assets/1a546e99-f7ed-47d6-a7d2-3d95a61cad3a" />
 
