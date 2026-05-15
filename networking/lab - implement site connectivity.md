@@ -1,6 +1,8 @@
 # Implement Site Connectivity
 
-In this doc, we'll connect two segmented VNets and establish connectivity between them.
+In this doc, we'll connect two segmented VNets and establish connectivity between them using VNet Peering, 
+setup a Route table for routing traffic to our VNet, 
+and configure private name resolution with Private DNS zones.
 
 ## Create Environment
 
