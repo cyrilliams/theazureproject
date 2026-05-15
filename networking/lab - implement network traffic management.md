@@ -1,6 +1,6 @@
 # Implement Network Traffic Management
 
-In this lab, we'll configure Traffic Management using Azure Load Balancer and an Application Gateway
+In this lab, we'll configure Traffic Management using Azure Load Balancer and an Application Gateway.
 
 ## Set Up Environment
 
