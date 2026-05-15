@@ -197,3 +197,32 @@ block attacks,
 monitor traffic,
 enforce rules.
 
+
+
+## Set Up Private DNS Zone
+
+In this part, we'll set up a Private DNS zone to resolve our VM to a hostname rather than just an IP within our internal network.
+
+We'll go to our Private DNS zone, **DNS Management > Recordssets > Add**
+
+<img width="1911" height="656" alt="image" src="https://github.com/user-attachments/assets/0b2bca77-3c73-4a07-a76c-a79eb50124eb" />
+
+Add our A record:
+
+<img width="574" height="493" alt="image" src="https://github.com/user-attachments/assets/99914303-17b8-4fb0-9b1d-ffc7dccddbbb" />
+
+Now, lets try to resolve our the IP of our CoreServicesVM to corevm.privatevnet.cyriltest.site using the nslookup command:
+
+We'll go to a different VM, our ManufacturingVM, go to **Operations > Run command > RunPowerShellScript**
+
+We'll run ```nslookup corevm.privatevnet.cyriltest.site```
+
+<img width="831" height="382" alt="image" src="https://github.com/user-attachments/assets/93343bff-b829-499d-a72e-c7daea4412f8" />
+
+And we get this:
+
+<img width="362" height="168" alt="image" src="https://github.com/user-attachments/assets/5d1531ec-362f-463f-b31d-633e95619439" />
+
+Nice!
+
+
