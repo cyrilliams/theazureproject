@@ -64,7 +64,7 @@ And now verify the type and size has changed:
 
 <img width="1939" height="444" alt="image" src="https://github.com/user-attachments/assets/0f45119f-cb11-456c-96f4-a55851628310" />
 
-## Deploy Virtual Machine Scale Sets
+# Deploy Virtual Machine Scale Sets
 
 <img width="279" height="54" alt="image" src="https://github.com/user-attachments/assets/2d1efde3-91c0-4de0-8189-0ef10c1d90fb" />
 
@@ -148,7 +148,7 @@ Instance Limits are also great to keep a minimum and maximum amount of VM instan
 Save.
 
 
-## Create a Virtual Machines via Azure Cloud
+# Create a Virtual Machines via Azure Cloud
 
 Now we'll create a VM using Azure Cloud. First we'll start with PowerShell.
 
