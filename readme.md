@@ -1,4 +1,4 @@
-# theazureproject
+# The Azure Project
 
 <img width="150" height="150" alt="image" src="https://github.com/user-attachments/assets/ff959f82-5cf3-46fc-a042-5e4601dd8998" />
 
