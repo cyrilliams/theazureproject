@@ -244,4 +244,9 @@ And we're in:
 
 <img width="1482" height="807" alt="image" src="https://github.com/user-attachments/assets/a4b7e6a1-6cd8-4271-b4d9-8260326d9de0" />
 
+If we try with our original admin account, we get this:
+
+<img width="1018" height="216" alt="image" src="https://github.com/user-attachments/assets/b9368692-f605-45b5-adae-af663fd83d40" />
+
+Bazinga!
 
