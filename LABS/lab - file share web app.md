@@ -395,7 +395,7 @@ Which gives us the Storage Account Key:
     "creationTime": "2026-05-18T03:09:10.453455+00:00",
     "keyName": "key1",
     "permissions": "FULL",
-    "value": "jvsWfSlNLmtk8H9FdUjZgLwH60F2mvi21Y20Mc/1oCElCEbAockeS0iGuY31m+pNnfcLy5rzwI2X+ASt8+Hpwg=="
+    "value": "[Taken Out]"
   },
   {
     "creationTime": "2026-05-18T03:09:10.453455+00:00",
