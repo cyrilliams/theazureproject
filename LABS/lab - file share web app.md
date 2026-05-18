@@ -455,3 +455,210 @@ If we go into our Container, we can find our uploaded File:
 
 
 
+
+
+
+
+
+
+
+
+# Extra/Optional
+
+Here, we'll do a couple more things like make the Website look nicer.
+
+## Beautify Website
+
+We'll go into our index.html file in the /views folder and upload our new html file:
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>ShareSafely</title>
+
+    <style>
+
+        /* ===== PAGE BACKGROUND ===== */
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+
+            /* Gradient background */
+            background: linear-gradient(135deg, #1e3c72, #2a5298);
+
+            /* Centers everything */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            height: 100vh;
+        }
+
+        /* ===== MAIN CONTAINER ===== */
+        .container {
+            background-color: white;
+            padding: 40px;
+            border-radius: 16px;
+
+            width: 400px;
+
+            text-align: center;
+
+            /* Shadow effect */
+            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+        }
+
+        /* ===== LOGO IMAGE ===== */
+        .logo {
+            width: 100px;
+            margin-bottom: 15px;
+        }
+
+        /* ===== MAIN TITLE ===== */
+        h1 {
+            margin-bottom: 10px;
+            color: #1e3c72;
+        }
+
+        /* ===== SUPPORTING TEXT ===== */
+        p {
+            color: #555;
+            margin-bottom: 25px;
+        }
+
+        /* ===== FILE UPLOAD BOX ===== */
+        .upload-box {
+            border: 2px dashed #2a5298;
+            padding: 25px;
+            border-radius: 12px;
+            margin-bottom: 20px;
+
+            background-color: #f7f9fc;
+        }
+
+        /* ===== FILE INPUT ===== */
+        input[type="file"] {
+            margin-top: 10px;
+        }
+
+        /* ===== BUTTON ===== */
+        button {
+            background-color: #2a5298;
+            color: white;
+
+            border: none;
+            padding: 12px 20px;
+
+            border-radius: 8px;
+
+            cursor: pointer;
+
+            font-size: 16px;
+
+            transition: 0.3s;
+        }
+
+        /* ===== BUTTON HOVER EFFECT ===== */
+        button:hover {
+            background-color: #1e3c72;
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <!-- IMAGE / LOGO -->
+        <img src="https://www.svgrepo.com/show/9488/cloud-upload-signal.svg"
+             alt="Secure Upload"
+             class="logo">
+
+        <!-- TITLE -->
+        <h1>ShareSafely</h1>
+
+        <!-- SUPPORTING TEXT -->
+        <p>
+            Securely upload and share files with ease.
+        </p>
+
+        <!-- FORM -->
+        <form action="/upload" method="post" enctype="multipart/form-data">
+
+            <div class="upload-box">
+                <label>Select a file to upload</label>
+                <br><br>
+
+                <input type="file" name="file" />
+            </div>
+
+            <button type="submit">Upload File</button>
+
+        </form>
+
+    </div>
+
+</body>
+</html>
+```
+Our website now looks like this:
+
+<img width="847" height="909" alt="image" src="https://github.com/user-attachments/assets/f38286d5-5e4e-4795-86af-9aa0c66aef3e" />
+
+
+## Resolve to DNS Name
+
+We'll set up DNS to resolve ```http://52.146.18.200:3000/``` → ```sharesafely.cyriltest.site```
+
+### Change Listening Port
+
+First, we'll change the listening port to 80 in the ```server.js``` file.
+
+```js
+app.listen(80, () => {
+    console.log('Server running on port 80');
+});
+```
+
+<img width="925" height="334" alt="image" src="https://github.com/user-attachments/assets/d94cf783-a667-4bc5-9179-705922b73277" />
+
+Save.
+
+### Add DNS Record
+
+Next, we'll create an A record in our DNS Registry.
+
+I use CloudFlare:
+
+<img width="1246" height="408" alt="image" src="https://github.com/user-attachments/assets/6d3e0435-f79b-40cc-873e-f2a84252d391" />
+
+### Open Port 80 in Network Security Group
+
+In our Server's NSG, we'll allow Port 80 or HTTP traffic:
+
+<img width="573" height="750" alt="image" src="https://github.com/user-attachments/assets/dbd97dd7-707f-44a8-aa3b-17b61b2d47d2" />
+
+### Verify
+
+On our Server, we'll run ```sudo node server.js```
+
+*In Linux, all ports below 1024 are considered privileged ports. In this case. We must use ```sudo``` to run our ```node server.js``` command*
+
+And then go to ```http://sharesafely.cyriltest.site/``` in a Web Browser.
+
+<img width="1920" height="1032" alt="image" src="https://github.com/user-attachments/assets/1e035ce3-a390-444d-b363-e1177e855a9a" />
+
+Nice!
+
+We can even still use our Web App Upload functions and it still resolves:
+
+<img width="1458" height="268" alt="image" src="https://github.com/user-attachments/assets/02b372f5-6d04-42cc-abfd-c6cfa85570dc" />
+
+
+
