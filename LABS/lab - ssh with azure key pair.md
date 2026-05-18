@@ -1,5 +1,7 @@
 # SSH with Azure Key Pair
 
+<img width="150" height="150" alt="image" src="https://github.com/user-attachments/assets/afc700be-603b-44e9-ba6c-38a5c35316d5" />
+
 In this doc, we'll create a Key Pair in Azure (public and private) 
 and then configure our Ubuntu Server to use the Key Pair as the only method to remote in.
 
