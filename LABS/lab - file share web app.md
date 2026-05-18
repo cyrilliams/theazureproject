@@ -236,7 +236,7 @@ sudo mkdir uploads views
 ls # to list files and directories
 ```
 
-### HTML File
+## HTML File
 
 We'll ```cd``` into our ```views``` folder and create an HTML index file:
 
