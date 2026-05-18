@@ -10,7 +10,7 @@ We will do the following things:
 - Create a Ubuntu Server in Azure
 - SSH in using the Private Key
 - Create another Admin User and use the same Key
-- Change the Key pair for the othe Admin User for individual Key Pairs
+- Change the Key pair for the other Admin User for individual Key Pairs
 
 ## Create VM and Key Pair Using Azure Cloud Shell
 
