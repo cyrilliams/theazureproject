@@ -408,7 +408,7 @@ Which gives us the Storage Account Key:
 <img width="1900" height="492" alt="image" src="https://github.com/user-attachments/assets/f58ba7b7-e5c2-4b12-996c-5f29e4b59278" />
 
 
-## Run App
+# Run App
 
 We'll use ```node server.js``` to start our application:
 
