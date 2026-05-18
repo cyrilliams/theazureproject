@@ -85,6 +85,9 @@ authenticate and access data in cloud storage (such as Azure Storage).
 
 *Do not hard code Connection Strings*
 
+
+
+
 We'll store it in our Key Vault by running a few commands.
 
 First we need to conver the variable to Secure String with:
@@ -661,4 +664,37 @@ We can even still use our Web App Upload functions and it still resolves:
 <img width="1458" height="268" alt="image" src="https://github.com/user-attachments/assets/02b372f5-6d04-42cc-abfd-c6cfa85570dc" />
 
 
+# Summary
 
+In this lab, we combined the following things to create a Cloud Web Application that integrates with Azure:
+```
+Linux administration
+Wweb development
+Cloud storage
+DNS
+Application hosting
+Azure identity/security concepts
+Networking
+```
+
+## Flow
+
+```
+User Browser
+     ↓
+DNS Resolution
+     ↓
+Cloudflare DNS
+     ↓
+Azure VM Public IP
+     ↓
+Ubuntu Linux VM
+     ↓
+Node.js Web Application
+     ↓
+Azure Blob Storage
+     ↓
+SAS URL Generated
+     ↓
+User Downloads File
+```
