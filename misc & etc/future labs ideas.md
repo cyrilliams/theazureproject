@@ -8,3 +8,4 @@
 - Set up Azure Monitor to alert an Action Group when Billing costs go past a certain amount.
 - AzCopy lab
 - VPN Site to Site & Point to Site lab
+  - Gateway subnet
