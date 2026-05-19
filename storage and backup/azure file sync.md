@@ -46,19 +46,6 @@ In our Windows Server, go to **Local Server > Properties > IE Enhanced Security 
 
 <img width="1366" height="768" alt="image" src="https://github.com/user-attachments/assets/c8ba512f-78e1-49fd-a191-8f24d18c2063" />
 
-### Install Azure CLI
-
-We'll install Azure CLI from [Microsoft Learn](https://learn.microsoft.com/en-us/cli/azure/install-azure-cli-windows?view=azure-cli-latest&pivots=msi)
-
-<img width="1366" height="768" alt="image" src="https://github.com/user-attachments/assets/4ea0453c-41bf-4111-afd6-4e104c58a70b" />
-
-Then in PowerShell, run ```az login```
-
-<img width="1366" height="768" alt="image" src="https://github.com/user-attachments/assets/26031014-aae1-44c8-83a2-f0e78ef1d8cd" />
-
-After logging in, you should get this:
-
-<img width="1366" height="768" alt="image" src="https://github.com/user-attachments/assets/2a8d035d-fac1-48f7-b13b-727e19b2b8ae" />
 
 
 ### File Sync Agent
@@ -186,3 +173,21 @@ I'll run my Invoke command one more time:
 Boom:
 
 <img width="1366" height="768" alt="image" src="https://github.com/user-attachments/assets/4a97c92b-b5a7-44c8-a75e-77eadf1a611f" />
+
+
+*I do not believe this part is needed:*
+
+### Install Azure CLI
+
+We'll install Azure CLI from [Microsoft Learn](https://learn.microsoft.com/en-us/cli/azure/install-azure-cli-windows?view=azure-cli-latest&pivots=msi)
+
+<img width="1366" height="768" alt="image" src="https://github.com/user-attachments/assets/4ea0453c-41bf-4111-afd6-4e104c58a70b" />
+
+Then in PowerShell, run ```az login```
+
+<img width="1366" height="768" alt="image" src="https://github.com/user-attachments/assets/26031014-aae1-44c8-83a2-f0e78ef1d8cd" />
+
+After logging in, you should get this:
+
+<img width="1366" height="768" alt="image" src="https://github.com/user-attachments/assets/2a8d035d-fac1-48f7-b13b-727e19b2b8ae" />
+
