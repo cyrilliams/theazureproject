@@ -9,7 +9,7 @@
 - [ ] AzCopy lab
 - [ ] VPN Site to Site & Point to Site lab
   - [ ] Gateway subnet
-- [ ] Azure Monitor lab
+- [ ] Azure Monitor & KQL lab
 - [ ] Redo Azure Web Service Plan & Web Service (Web App) lab
      
 
