@@ -10,6 +10,7 @@
 - [ ] VPN Site to Site & Point to Site lab
   - [ ] Gateway subnet
 - [ ] Azure Monitor & KQL lab
+  - [ ] Set up Grafana with this (optional)
 - [ ] Redo Azure Web Service Plan & Web Service (Web App) lab
      
 
