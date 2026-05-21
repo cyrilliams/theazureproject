@@ -5,7 +5,7 @@
   - [x]  Use on prem Ubuntu Server
 - [ ] Configure CI/CD Pipeline with some sort of Website to Azure Static Web Apps
 - [x] Build some sort of Web Application that takes data and stores it in Azure Blob Storage
-- [ ] Set up Azure Monitor to alert an Action Group when Billing costs go past a certain amount.
+- [x] Set up Azure Monitor to alert an Action Group when Billing costs go past a certain amount.
 - [x] AzCopy lab
 - [ ] VPN Site to Site & Point to Site lab
   - [ ] Gateway subnet
