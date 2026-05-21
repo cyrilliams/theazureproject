@@ -385,3 +385,83 @@ AzCopyLab/azure-a(1).png; Content Length: 56.29 KiB
 AzCopyLab/image (1).png; Content Length: 42.30 KiB
 AzCopyLab/image (3).jpg; Content Length: 35.93 KiB
 ```
+
+
+
+
+
+
+## Blob to Blob File Transfer
+
+We'll test out Blob to Blob file transer with AzCopy
+
+I'll quickly create another Container:
+```powershell
+PS C:\Users\cwilliams> $context = New-AzStorageContext -StorageAccountName "cyrilazcopystoracc" -UseConnectedAccount
+PS C:\Users\cwilliams> New-AzStorageContainer -Name "azcopylabcontainer2" -Context $context -Permission Off
+
+   Storage Account Name: cyrilazcopystoracc
+
+Name                 PublicAccess         LastModified                   IsDeleted  VersionId
+----                 ------------         ------------                   ---------  ---------
+azcopylabcontainer2  Off                  5/21/2026 8:24:32 PM +00:00
+```
+
+Lets verify the contents of our first Container vs Container 2
+
+Container 1:
+```powershell
+PS C:\Users\cwilliams> Get-AzStorageBlob -Container "azcopylabcontainer" -Context $context
+
+   AccountName: cyrilazcopystoracc, ContainerName: azcopylabcontainer
+
+Name                 BlobType  Length          ContentType                    LastModified         AccessTier SnapshotTime                 IsDeleted  VersionId
+----                 --------  ------          -----------                    ------------         ---------- ------------                 ---------  ---------
+AzCopyLab/02 - Scar… BlockBlob 8207365         audio/mpeg                     2026-05-21 17:47:49Z Hot                                     False
+AzCopyLab/Image (2)… BlockBlob 283341          image/png                      2026-05-21 17:26:59Z Hot                                     False
+AzCopyLab/azure-a(1… BlockBlob 57644           image/png                      2026-05-21 17:53:20Z Hot                                     False
+AzCopyLab/image (1)… BlockBlob 43314           image/png                      2026-05-21 17:26:59Z Hot                                     False
+AzCopyLab/image (3)… BlockBlob 36796           image/jpeg                     2026-05-21 17:26:59Z Hot                                     False
+```
+
+Container 2:
+```powershellPS C:\Users\cwilliams> Get-AzStorageBlob -Container "azcopylabcontainer2" -Context $context
+PS C:\Users\cwilliams>
+```
+We can see it has nothing in it.
+
+### Copy Using AzCopy
+
+In Command Prompt, we'll run:
+```
+C:\>azcopy copy "https://cyrilazcopystoracc.blob.core.windows.net/azcopylabcontainer/AzCopyLab/02 - Scary Monsters and Nice Sprites.mp3" "https://cyrilazcopystoracc.blob.core.windows.net/azcopylabcontainer2"
+```
+We get:
+
+<img width="1478" height="813" alt="image" src="https://github.com/user-attachments/assets/2de99fe2-4082-4e0e-9498-f35b28a1179b" />
+
+We can see one file was copied.
+
+### Verify
+
+Let's double check our transfer was succesful:
+
+```powershell
+PS C:\Users\cwilliams> Get-AzStorageBlob -Container "azcopylabcontainer2" -Context $context
+
+   AccountName: cyrilazcopystoracc, ContainerName: azcopylabcontainer2
+
+Name                 BlobType  Length          ContentType                    LastModified         AccessTier SnapshotTime                 IsDeleted  VersionId
+----                 --------  ------          -----------                    ------------         ---------- ------------                 ---------  ---------
+02 - Scary Monsters… BlockBlob 8207365         audio/mpeg                     2026-05-21 20:33:31Z Hot                                     False
+```
+
+Lets check the Portal:
+
+<img width="1908" height="437" alt="image" src="https://github.com/user-attachments/assets/e3ddc446-8f5d-4de6-9365-fd393010666c" />
+
+
+Nice!
+
+
+
