@@ -11,7 +11,7 @@
   - [ ] Gateway subnet
 - [ ] Azure Monitor & KQL lab
   - [ ] Set up Grafana with this (optional)
-- [ ] Redo Azure Web Service Plan & Web Service (Web App) lab
+- [x] Redo Azure Web Service Plan & Web Service (Web App) lab
 - [ ] Azure Key Vault lab
   - [ ] Reference in ARM template
   - [ ] Configure Access Policy
