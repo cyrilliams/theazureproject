@@ -49,5 +49,48 @@ Under our Virtual Machine, we'll go to **Settings > Disks > Additional settings*
 
 Save. *This may take a while*
 
+## Troubleshooting
+
+When encrypting the Disk, I ran in to this error:
+
+<img width="685" height="466" alt="image" src="https://github.com/user-attachments/assets/944571be-81c9-4db6-88e4-d955cab587fe" />
+
+If we look closely, we can see that because we are running Windows Server 2022, we need to use RSA 3072.
+I had chosen RSA 2048.
+
+Let's create a new version of our Key:
+
+We'll go back to our Key and create a new version using RSA 3072 or higher:
+
+<img width="1989" height="957" alt="image" src="https://github.com/user-attachments/assets/4a341ce6-47d7-4da1-9cc0-e5a7828cc308" />
+
+Now we can see both of our Key versions:
+
+<img width="1153" height="480" alt="image" src="https://github.com/user-attachments/assets/32739259-6820-4071-9973-c7cdb5613077" />
+
+### Retry Encryption
+
+Let's try encrypting the Disk again!
+
+<img width="935" height="173" alt="image" src="https://github.com/user-attachments/assets/ba82dbd2-8e83-4aae-9999-31722a6e15b9" />
+
+We can see it gives us the option for the Current or Older version. Select the Current and Save.
+
+Now we can see our Encryption instance:
+
+<img width="2545" height="870" alt="image" src="https://github.com/user-attachments/assets/2b8fc58a-07a1-4988-a8dc-c89072643d0d" />
+
+
+## Verify Encryption
+
+Let's verify our disk was Encrypted.
+
+If we go back to our VM,  **Settings > Disks**, we can see our disk has now shows it is Encrypted:
+
+<img width="2548" height="689" alt="image" src="https://github.com/user-attachments/assets/ae1f84e2-d0b3-4624-814f-0c1c94231f05" />
+
+Under 'Extensions + applications', we can also see 'AzureDiskEncryption', as well:
+
+<img width="2548" height="720" alt="image" src="https://github.com/user-attachments/assets/057901f5-4798-4c58-839f-d028a889d99b" />
 
 
