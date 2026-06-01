@@ -1,6 +1,6 @@
 # Disk Encryption with Azure Key Vault
 
-In this doc, we'll encyrpt an Azure Virtual Disk with a Key Encryption Key (KEK) stored in Azure Key Vault
+In this doc, we'll encrypt an Azure Virtual Disk with a Key Encryption Key (KEK) stored in Azure Key Vault
 
 ## Create Resources
 
@@ -30,7 +30,7 @@ Next, we'll go to our Key Vault, **Objects > Keys > Generate/Import**
 
 Next, we'll go to Access Policies and Create an Access Policy
 
-For this Key, we want it to only be able to Wrap (Encrypy) and Unwrap (Decrypt) the Disk:
+For this Key, we want it to only be able to Wrap (Encrypt) and Unwrap (Decrypt) the Disk:
 
 <img width="1156" height="1080" alt="image" src="https://github.com/user-attachments/assets/3cb69b13-07ea-4de5-b46e-0c88c342559d" />
 
@@ -41,7 +41,7 @@ Under Principal, we'll select 'Azure Key Vault'
 
 ### Enable Disk Encryption
 
-Now on our VM disk, we'll enable Disk Encyrption.
+Now on our VM disk, we'll enable Disk Encryption.
 
 Under our Virtual Machine, we'll go to **Settings > Disks > Additional settings**, and select the OS Disk, Key Vault & Key:
 
@@ -92,5 +92,16 @@ If we go back to our VM,  **Settings > Disks**, we can see our disk has now show
 Under 'Extensions + applications', we can also see 'AzureDiskEncryption', as well:
 
 <img width="2548" height="720" alt="image" src="https://github.com/user-attachments/assets/057901f5-4798-4c58-839f-d028a889d99b" />
+
+## Access Policy
+
+Another important concept to note with Azure Key Vault is that permissions can be set through RBAC (Role Based Access Control) or Access Policies within the Key Vault.
+
+For instance, to perform certain functions within Azure Key Vault, I may need to assign certain permissions within the Access Policy:
+
+<img width="1031" height="1178" alt="image" src="https://github.com/user-attachments/assets/1c4bd922-c0e3-4d5e-ae29-92b792d25a4a" />
+
+*You may not want to enable all permissions like I did here to stick to the principle of Least Privilege*
+
 
 
