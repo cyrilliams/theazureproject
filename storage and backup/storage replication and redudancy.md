@@ -32,12 +32,26 @@ Change from ZRS to GZRS and Save.
 
 <img width="1010" height="241" alt="image" src="https://github.com/user-attachments/assets/252ba1ba-95dd-4de6-8b8e-1b094d06a912" />
 
+After many hours, it finally updates and shows us our Secondary Region:
 
+<img width="1102" height="588" alt="image" src="https://github.com/user-attachments/assets/56d1be1c-a384-43b2-9fc2-d05fe6f36706" />
 
+We can also look at the Storage Endpoints, and see that there is only a Primary endpoint.
+That is because data is being written to both Regions.
 
+<img width="574" height="431" alt="image" src="https://github.com/user-attachments/assets/5784eed1-e77c-486b-8c8a-7e73f4fb958d" />
 
+## Change to Read Only Geo Redudant Storage
 
+*I had to create another Storage Account for this part due to Redudancy change limitations*
 
+In this Storage Account, we can see that it is set to ZRS and only has one Primary endpoint.
+
+<img width="1910" height="466" alt="image" src="https://github.com/user-attachments/assets/ab1006dd-0ba9-4ebb-80a6-0c16c30a87ea" />
+
+Let's change this from ZRS to RA-GRS.
+
+*This took a couple hours for me*
 
 
 
