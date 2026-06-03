@@ -6,6 +6,8 @@ Our objectives will be to:
 - Change our Storage Account from Zone Redundant Storage (ZRS) to Geo Redudnact Storage (GRS) and/or Read Access Geo Redundant Storage.
 - Enable Object Replication between Storage Accounts in different Regions.
 
+# Data & Storage Redundancy
+
 ## Create Storage Account
 
 We'll create a storage account in East US 2. We'll use ZRS that way our data is spread across 3 different datacenters in a Zone.
@@ -29,3 +31,33 @@ Let's change our Storage Account Redundancy settings by going back to **Data man
 Change from ZRS to GZRS and Save.
 
 <img width="1010" height="241" alt="image" src="https://github.com/user-attachments/assets/252ba1ba-95dd-4de6-8b8e-1b094d06a912" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+---
+
+# Object Replication
+
+Let's create a new Storage Account to replicate our data to. Let's put it in a seperate region:
+
+<img width="819" height="767" alt="image" src="https://github.com/user-attachments/assets/8ef983ab-20ee-420c-af05-1be3e11ab439" />
+
+
+
+
+
