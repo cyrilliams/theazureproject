@@ -12,6 +12,8 @@ My goal is to learn all the fundametal and in depth aspects of Microsoft Azure, 
 
 <img width="150" height="150" alt="image" src="https://github.com/user-attachments/assets/60a420c6-0745-46b6-83ac-4f6e902ad843" />
 
+**AZ-104 passed on 6/18/26**
+
 ---
 
 
