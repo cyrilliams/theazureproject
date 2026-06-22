@@ -59,6 +59,80 @@ Now, if we go into our Lake Worth V-Net, we can see Peering has been enabled as 
 <img width="1330" height="679" alt="image" src="https://github.com/user-attachments/assets/1c9ddce8-75ea-466d-9ff8-d91040ab3128" />
 
 
+
+### Create an Azure Virtual Machine
+
+Lets create an Azure Linux VM in our Application Subnet.
+
+<img width="789" height="675" alt="image" src="https://github.com/user-attachments/assets/9103893c-d7e1-4cf8-9590-79c7fb42b50d" />
+
+<img width="862" height="670" alt="image" src="https://github.com/user-attachments/assets/867e5748-527c-44fb-9d96-d70968d35977" />
+
+We'll allow SSH and create an SSH Key:
+
+<img width="797" height="675" alt="image" src="https://github.com/user-attachments/assets/04a680ad-2fd0-4a21-b364-f957733f87ae" />
+
+We'll configure this to be in our Applications Subnet in our Lake Worth VNet.
+
+We'll block public access. We want internal traffic to this Machine only:
+
+<img width="874" height="641" alt="image" src="https://github.com/user-attachments/assets/96396efc-ac5a-40b1-98c7-eb3768e00984" />
+
+Next, we'll download our Key Pair and create our VM.
+
+Now we can see our new VM with No Public IP:
+
+<img width="1904" height="862" alt="image" src="https://github.com/user-attachments/assets/c03b927b-204c-4472-a27d-0c9143decdf2" />
+
+
+
+
+
+
+
+
+## Implement Site (Point) to Site Connectivity
+
+We'll use a VPN to connect our on Prem Windows Server to be able to talk to our Azure Machine and services. We'll use a Point to Site VPN because I only have one machine.
+
+### Create Gateway
+
+First, we'll create a VPN Gateway. We'll go to **Connections > VPN gateway > VPN gateways > Add**
+
+We'll use the GatewaySubnet from our mainLocation Vnet:
+
+<img width="788" height="747" alt="image" src="https://github.com/user-attachments/assets/10572e83-027c-449e-8ec0-dc4363571998" />
+
+We'll create two Public IPs as well:
+
+<img width="812" height="617" alt="image" src="https://github.com/user-attachments/assets/2599750f-dedb-49b5-b2b6-e23a131d8ee0" />
+
+After several minutes, our Gateway is deployed.
+
+### Set Up Point to Site Gateway
+
+In our newly created Gateway, go to **Settings > Point to site configuration > Configure now**
+
+We'll give it an address pool, Auth type and a public IP:
+
+<img width="1895" height="730" alt="image" src="https://github.com/user-attachments/assets/61670698-9980-4ebc-9f37-024aa9c86161" />
+
+We'll set up our Tenant, Audience and Issuer, using our Tenant ID:
+
+<img width="739" height="410" alt="image" src="https://github.com/user-attachments/assets/b05d4b08-bea0-4058-a1bb-497593f71ce4" />
+
+
+
+
+
+
+
+
+
+
+
+
+
 ## Connect On Premises Windows Server and Connect Identity
 
 For this part, we'll connect our on Prem Windows Server running Active Directory to our Azure tenant.
@@ -82,5 +156,10 @@ Enter our on Prem admin credentials:
 Install:
 
 <img width="937" height="664" alt="image" src="https://github.com/user-attachments/assets/56eac812-d0e8-4b28-a3ed-eefacb874a1b" />
+
+After a couple minutes, we can see Billy Bob is in our Entra ID, with 'On-premises syncronization' set to 'Yes'
+
+<img width="1630" height="451" alt="image" src="https://github.com/user-attachments/assets/307c0238-fa5e-4054-a71e-027bc2bb4feb" />
+
 
 
