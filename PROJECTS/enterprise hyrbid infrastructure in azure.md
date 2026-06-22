@@ -224,7 +224,7 @@ Failed! This is what we want! No out bound access!
 
 
 
-## Enable Active Site Recovery
+## Enable Backup
 
 <img width="111" height="99" alt="image" src="https://github.com/user-attachments/assets/ece5608b-cf89-4ef7-807d-7dd123bf4678" />
 
@@ -242,28 +242,15 @@ We'll enable Geo-Redudancy to make sure our VM is available in another Region:
 
 Create.
 
-After that is done, we'll go to our VM, **Backup + disaster recovery > Disaster recovery**
+After that is done, we'll go to our VM, **Backup + disaster recovery > Backup**
 
-Here, we can choose what region to replicate to:
+<img width="1373" height="654" alt="image" src="https://github.com/user-attachments/assets/95a91372-376b-46ed-af7f-dee4eef6f33a" />
 
-<img width="1651" height="706" alt="image" src="https://github.com/user-attachments/assets/ca0c2b7f-62ea-4bf9-b52d-86f58c452632" />
+We'll keep the default Backup Policy
 
-We'll verify the Target settings:
+<img width="614" height="566" alt="image" src="https://github.com/user-attachments/assets/a4339097-7fee-421c-b6e0-df56bbf1c0bd" />
 
-<img width="1326" height="792" alt="image" src="https://github.com/user-attachments/assets/7d23aaa2-83f6-43e9-925a-e5b17f2f4124" />
-
-
-We will also need to create an Automation account, so that replication and failover may take affect without User intervention:
-
-<img width="1270" height="502" alt="image" src="https://github.com/user-attachments/assets/e335ff21-dc1e-4e5a-935e-934c16eb7aac" />
-
-Start Replication.
-
-
-
-
-
-
+Enable backup.
 
 
 
