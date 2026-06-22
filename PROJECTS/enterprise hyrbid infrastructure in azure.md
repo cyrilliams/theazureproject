@@ -252,9 +252,11 @@ We'll keep the default Backup Policy
 
 Enable backup.
 
+<img width="1910" height="470" alt="image" src="https://github.com/user-attachments/assets/103b9ace-abcc-4fec-8a1f-b17df801c3ce" />
 
+Now we can see our VM is backed up with the Backup Policy of every 4 hours.
 
-
+<img width="567" height="302" alt="image" src="https://github.com/user-attachments/assets/506cf718-2544-4b2b-9e18-79b512f7b587" />
 
 
 
@@ -290,6 +292,55 @@ Install:
 After a couple minutes, we can see Billy Bob is in our Entra ID, with 'On-premises syncronization' set to 'Yes'
 
 <img width="1630" height="451" alt="image" src="https://github.com/user-attachments/assets/307c0238-fa5e-4054-a71e-027bc2bb4feb" />
+
+
+
+
+
+
+## Storage Account/Azure File Sync with AD Authentication
+
+Next, lets create a Storage Account to sync with our on Prem File Share and verify that Billy Bob can access the file share.
+
+
+### Create Storage Account
+
+<img width="113" height="98" alt="image" src="https://github.com/user-attachments/assets/c88b7fbe-b271-4591-9730-e9040a94c8ad" />
+
+Lets create our Storage Account here:
+
+<img width="818" height="762" alt="image" src="https://github.com/user-attachments/assets/e81a53af-dc68-458d-a062-464fb2269b16" />
+
+Let's secure access by limiting access to our Vnet:
+
+<img width="788" height="777" alt="image" src="https://github.com/user-attachments/assets/00780c57-9d2b-453a-806c-51ab4fe9eeb0" />
+
+After, I'll create a Classic File Share:
+
+<img width="794" height="660" alt="image" src="https://github.com/user-attachments/assets/1365b7cc-24e8-473a-a27e-a63ae5404a11" />
+
+I'll also enable Backups with our RSV:
+
+<img width="800" height="459" alt="image" src="https://github.com/user-attachments/assets/4127cdba-40cc-4f5d-b06c-d85dd22ac755" />
+
+
+### Create File Sync
+
+We'll create an On Prem File Sync.
+
+<img width="106" height="99" alt="image" src="https://github.com/user-attachments/assets/19c10e2e-756a-4c81-bbb4-b3400b3abdb6" />
+
+Go to **File Sync > Create**
+
+<img width="769" height="541" alt="image" src="https://github.com/user-attachments/assets/55f21618-ec98-4262-b6d4-dd6a4adad916" />
+
+Once deployed, go to **Sync Groups > Create**, and link our Storage Account and File Share:
+
+<img width="725" height="437" alt="image" src="https://github.com/user-attachments/assets/01855e95-8a25-4b0f-8bf4-238a7f144cf4" />
+
+On our Server, we'll download and install the Azure File Sync Agent:
+
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/7f6d5a15-68ef-41dd-a129-428f0aa2c82f" />
 
 
 
