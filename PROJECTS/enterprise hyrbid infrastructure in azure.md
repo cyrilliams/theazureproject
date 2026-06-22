@@ -121,6 +121,59 @@ We'll set up our Tenant, Audience and Issuer, using our Tenant ID:
 
 <img width="739" height="410" alt="image" src="https://github.com/user-attachments/assets/b05d4b08-bea0-4058-a1bb-497593f71ce4" />
 
+Next, on our On-Prem Windows Server, we'll download the VPN client configuration file:
+
+<img width="855" height="196" alt="image" src="https://github.com/user-attachments/assets/be2bb6a5-7f51-417f-a8a0-377e76579986" />
+
+
+<img width="781" height="168" alt="image" src="https://github.com/user-attachments/assets/d6ff6a41-36ec-448a-9d8a-950cdfa20202" />
+
+
+<img width="1920" height="934" alt="image" src="https://github.com/user-attachments/assets/f53462f9-e95a-438f-9eb4-19e2390a229a" />
+
+Next, we'll donwload the actual VPN client:
+
+<img width="1920" height="934" alt="image" src="https://github.com/user-attachments/assets/fb881210-46b8-4dff-adc9-2f1ac1814f01" />
+
+In the VPN client zip folder, we'll run the Install Powershell script:
+
+<img width="1920" height="934" alt="image" src="https://github.com/user-attachments/assets/6fc9927f-5f08-4a56-833c-412f89f3eafb" />
+
+Open the Azure VPN Client and import the Point to Site Client Config from earlier:
+
+<img width="1920" height="934" alt="image" src="https://github.com/user-attachments/assets/e21c8f35-1410-4c11-87c5-66c004dd2e31" />
+
+It populates the configuration:
+
+<img width="1920" height="934" alt="image" src="https://github.com/user-attachments/assets/728b0756-07a3-47c8-a981-d8d01b256f9c" />
+
+Save and connect:
+
+<img width="1920" height="934" alt="image" src="https://github.com/user-attachments/assets/7b038a5c-4f2a-409b-838d-ea5407d0bdc5" />
+
+### Troubleshooting the VPN Connection: App Permissions
+
+We are met with this error that says we must have 'Sign in and read user profile permissions'
+
+<img width="1033" height="219" alt="image" src="https://github.com/user-attachments/assets/0653ffc8-066b-4a79-aacf-fb7ce4a0c4fa" />
+
+After looking into, we need to give permissions to Azure VPN in Entra.
+
+Go to **Entra ID > Enterprise Applications > Azure VPN > Security > Permissions**
+
+<img width="1637" height="422" alt="image" src="https://github.com/user-attachments/assets/5e798278-3dfe-422a-992e-49d2e304e456" />
+
+Next, we'll click 'Grant admin consent'
+
+<img width="1364" height="217" alt="image" src="https://github.com/user-attachments/assets/bf450fa5-35a2-47a3-a90b-e01e00f7a9f1" />
+
+<img width="1060" height="788" alt="image" src="https://github.com/user-attachments/assets/befa8f4b-104c-4b3d-842a-5abaa48f6d20" />
+
+Now we can see the correct permissions:
+
+<img width="1373" height="642" alt="image" src="https://github.com/user-attachments/assets/d7f695c0-76f8-4361-a46c-0b5208665f51" />
+
+Lets try to connect to the VPN again:
 
 
 
