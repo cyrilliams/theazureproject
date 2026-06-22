@@ -175,6 +175,96 @@ Now we can see the correct permissions:
 
 Lets try to connect to the VPN again:
 
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/48d98500-fd82-4e5e-97ce-a566bf00e2df" />
+
+After some trial and error with changing the the config, we are in!
+
+We can see our config here as well:
+
+<img width="567" height="278" alt="image" src="https://github.com/user-attachments/assets/6200deef-5062-4093-b75e-fa0baab1de5e" />
+
+
+
+## Configure Network
+
+Now, we need to configure our Vnet to allow traffic from our on Prem device.
+
+### Modify Peering
+
+On both our VNet Peers, we'll check the following options:
+
+<img width="783" height="775" alt="image" src="https://github.com/user-attachments/assets/5775daa4-8b54-427b-a3f8-0f4c4ae4dc9c" />
+
+On the Spoke Vnet Peer, we'll make sure it can use the Hub's Gateway:
+
+<img width="898" height="868" alt="image" src="https://github.com/user-attachments/assets/0f13dff7-ee53-498e-8ffc-fa5beedc1735" />
+
+
+### Re-Download VPN Client and Verify
+
+Redownload the P2S VPN config files and connect. Let's try pinging our Linux VM, located in our Lake Worth Vnet, in the Applications Subnet:
+
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/3ccec345-53d7-4050-afe7-3746514e2ec6" />
+
+Amazing!
+
+Let's try to SSH into our internal Linux VM:
+
+<img width="992" height="941" alt="image" src="https://github.com/user-attachments/assets/caccdee1-4621-494e-ac1f-70adacde3ea4" />
+
+Hooray!
+
+#### Verify External Access
+
+On my PC (not on the Windows VM I am testing with), let's try to ping the Linux VM
+
+<img width="1113" height="626" alt="image" src="https://github.com/user-attachments/assets/7524b7fa-ef69-425a-90e4-375dfa5caf65" />
+
+Failed! This is what we want! No out bound access!
+
+
+
+## Enable Active Site Recovery
+
+<img width="111" height="99" alt="image" src="https://github.com/user-attachments/assets/ece5608b-cf89-4ef7-807d-7dd123bf4678" />
+
+Let's say our Linux VM was extremely important and could tolerate no downtime, let's setup a Recovery Services Vault to enable Active Site Recovery in case of a datacenter issue.
+
+### Create Recovery Service Vault
+
+First, we'll create the Recovery Service Vault (RSV) in the same region as the VM.
+
+<img width="754" height="572" alt="image" src="https://github.com/user-attachments/assets/582a06c9-8a89-49c1-b0c5-c9dfbb23ab72" />
+
+We'll enable Geo-Redudancy to make sure our VM is available in another Region:
+
+<img width="731" height="136" alt="image" src="https://github.com/user-attachments/assets/a37e8f96-2fda-4afa-8b6e-569c95f9b219" />
+
+Create.
+
+After that is done, we'll go to our VM, **Backup + disaster recovery > Disaster recovery**
+
+Here, we can choose what region to replicate to:
+
+<img width="1651" height="706" alt="image" src="https://github.com/user-attachments/assets/ca0c2b7f-62ea-4bf9-b52d-86f58c452632" />
+
+We'll verify the Target settings:
+
+<img width="1326" height="792" alt="image" src="https://github.com/user-attachments/assets/7d23aaa2-83f6-43e9-925a-e5b17f2f4124" />
+
+
+We will also need to create an Automation account, so that replication and failover may take affect without User intervention:
+
+<img width="1270" height="502" alt="image" src="https://github.com/user-attachments/assets/e335ff21-dc1e-4e5a-935e-934c16eb7aac" />
+
+Start Replication.
+
+
+
+
+
+
+
 
 
 
