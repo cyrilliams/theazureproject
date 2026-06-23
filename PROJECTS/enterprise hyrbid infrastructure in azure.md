@@ -342,5 +342,113 @@ On our Server, we'll download and install the Azure File Sync Agent:
 
 <img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/7f6d5a15-68ef-41dd-a129-428f0aa2c82f" />
 
+Run and configure the sync:
+
+<img width="1708" height="960" alt="image" src="https://github.com/user-attachments/assets/95cf3b88-fb59-4423-b3ae-6287f42f58d9" />
+
+Now we can refresh our Registered Servers and see our on-prem Server:
+
+<img width="2551" height="603" alt="image" src="https://github.com/user-attachments/assets/b05c3020-5c91-485b-8b7a-aced9987c88e" />
+
+We'll now copy the Share from on on-prem Server to use as a Server Endpoint
+
+<img width="2549" height="1225" alt="image" src="https://github.com/user-attachments/assets/877697c3-2cda-4284-b3ec-63e3ed159d30" />
+
+
+### Create Management Windows VM and Verify On Prem Authentication
+
+Let's make sure that our user Billy Bob, can access the file file share using his on-prem Authentication from an Azure Windows VM.
+
+I'll quickly create a Windows 11 VM and put it in the mainLocation Vnet and Management Subnet. 
+
+<img width="1605" height="967" alt="image" src="https://github.com/user-attachments/assets/8b9be5a4-09f6-49c2-8701-5d904440d595" />
+
+Under Management, we'll want to enable 'Login with Microsoft Entra ID'
+
+<img width="995" height="564" alt="image" src="https://github.com/user-attachments/assets/da6412db-17ea-4b8a-b6a3-fc80343ca949" />
+
+Create the VM/.
+
+We'll also create an NSG rule that allows RDP from my IP only:
+
+<img width="712" height="990" alt="image" src="https://github.com/user-attachments/assets/a67593c3-f301-4244-baf6-611bfd8a73f7" />
+
+Also add an Outbound 443 rule, so the VM can verify Entra ID credentials:
+
+<img width="718" height="988" alt="image" src="https://github.com/user-attachments/assets/ee63ed63-e0c1-41aa-b2cc-d9b4616d97e7" />
+
+
+I'll allow RDP and use RDP to connect.
+
+<img width="542" height="599" alt="image" src="https://github.com/user-attachments/assets/aa94edea-6f34-42a1-a354-e2ae4085a71b" />
+
+And we're in:
+
+<img width="2560" height="1440" alt="image" src="https://github.com/user-attachments/assets/c414bc06-790e-46e1-b570-ab16299d236b" />
+
+Lets run ```ipconfig``` to verify our IP address:
+
+<img width="1556" height="831" alt="image" src="https://github.com/user-attachments/assets/8db7792f-0275-4234-992b-4703e7782e6e" />
+
+We can also ping our other Linux VM:
+
+<img width="1515" height="788" alt="image" src="https://github.com/user-attachments/assets/f51999ed-510a-41aa-a412-1d104cb334f2" />
+
+
+### Add Role for User and Access
+
+Now, let's give Billy Bob the 'Virtual Machine User Login' role, so he can login to this VM:
+
+<img width="2540" height="910" alt="image" src="https://github.com/user-attachments/assets/7e09bf1d-7670-4755-b107-bf04bca18eda" />
+
+Select Billy Bob.
+
+<img width="1557" height="572" alt="image" src="https://github.com/user-attachments/assets/6fc839da-fb70-4231-a6ef-3d82135d20de" />
+
+### Configure Entra ID Based Login
+
+Because the device I was joining from was not joined my Entra ID, I had to make a couple changes to remote onto the VM.
+
+First, using the admin login, I had to disable NLA (Network Level Authentication)
+
+<img width="2560" height="1440" alt="image" src="https://github.com/user-attachments/assets/210920fd-c90b-4661-91ec-3e6be9c229ae" />
+
+In PowerShell (Admin), we have to add the following line to add our Entra ID:
+
+```Add-LocalGroupMember -Group "Remote Desktop Users" -Member "AzureAD\bbob@cyriltest.site"```
+
+<img width="2560" height="1440" alt="image" src="https://github.com/user-attachments/assets/342e1c1f-4d04-4aea-839d-91479fa3525b" />
+
+Verify they've been added in RDP settings:
+
+<img width="1545" height="1207" alt="image" src="https://github.com/user-attachments/assets/281c67a8-1e92-4f2d-a601-c3f817ef61c9" />
+
+
+
+Next, I had to edit the RDP file I was using and add these two lines:
+
+```
+enablecredsspsupport:i:0
+authentication level:i:2
+```
+
+<img width="1583" height="698" alt="image" src="https://github.com/user-attachments/assets/e16a3f60-ef88-45ca-8464-e8f63ab81e61" />
+
+
+After, try logging in with Billy Bob's UPN or email:
+
+<img width="542" height="607" alt="image" src="https://github.com/user-attachments/assets/6fa0409e-1699-4e45-950c-c97dbb3b2852" />
+
+
+
+
+
+
+
+
+
+
+
+
 
 
