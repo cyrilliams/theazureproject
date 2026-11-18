@@ -3,6 +3,17 @@
 In this lab, we'll create an File Sharing Web App that stores files with Azure Blob Storage,
 gives the user a URL that ensures only authorized users have access to it and for a limited time.
 
+## Resources of this lab
+
+This LAB uses the following processes:
+- Azure resources: Azure Storage Account & Azure Key Vault
+- Linux: Ubuntu VM running in Azure
+- HTML front end
+- Node.js backend
+- Azure networking
+- DNS using Cloudflare
+
+
 ## Create Resource Group
 
 We'll use the Cloud CLI (PowerShell) to create our Resource Group:
