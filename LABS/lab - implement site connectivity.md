@@ -4,6 +4,18 @@ In this doc, we'll connect two segmented VNets and establish connectivity betwee
 setup a Route table for routing traffic to our VNet, 
 and configure private name resolution with Private DNS zones.
 
+## What this LAB Covers:
+
+- Azure networking: VNets, subnets, VNet Peering and private IP addressing
+- Routing: route tables, UDRs, next hops and virtual appliances
+- Network security: NSGs, ASGs, segmentation and traffic inspection concepts
+- DNS: Private DNS Zones, A records and internal name resolution
+- Troubleshooting: Network Watcher and Connection Troubleshoot
+- Windows networking: Test-NetConnection and nslookup
+- Network architecture: separating workloads while still allowing controlled communication
+
+
+
 ## Create Environment
 
 
